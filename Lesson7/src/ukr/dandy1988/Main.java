@@ -20,11 +20,11 @@ public class Main {
         Arrays.sort(arrayExample);
         long arrayFinishSort = currentTimeMillis();
 
-//        System.out.println();
-//        for (int i = 0; i < arrayExample.length; i++) {
-//            System.out.print(arrayExample[i]+"  ");
-//        }
-//        System.out.println();
+        System.out.println();
+        for (int i = 0; i < arrayExample.length; i++) {
+            System.out.print(arrayExample[i]+"  ");
+        }
+        System.out.println();
 
         long listStartSort = currentTimeMillis();
         Collections.sort(list1, new Comparator<Integer>() {
