@@ -7,11 +7,11 @@ import static java.lang.System.currentTimeMillis;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        Integer[] arrayExample = new Integer [100000];
+        // write your code here
+        Integer[] arrayExample = new Integer[1000000];
 
-        for (int i = 0; i < arrayExample.length ; i++) {
-            arrayExample [i] = new Random().nextInt(100);
+        for (int i = 0; i < arrayExample.length; i++) {
+            arrayExample[i] = new Random().nextInt(100);
         }
 
         ArrayList<Integer> list1 = new ArrayList<Integer>(Arrays.asList(arrayExample));
@@ -20,11 +20,11 @@ public class Main {
         Arrays.sort(arrayExample);
         long arrayFinishSort = currentTimeMillis();
 
-        System.out.println();
-        for (int i = 0; i < arrayExample.length; i++) {
-            System.out.print(arrayExample[i]+"  ");
-        }
-        System.out.println();
+//        System.out.println();
+//        for (int i = 0; i < arrayExample.length; i++) {
+//            System.out.print(arrayExample[i]+"  ");
+//        }
+//        System.out.println();
 
         long listStartSort = currentTimeMillis();
         Collections.sort(list1, new Comparator<Integer>() {
@@ -36,8 +36,8 @@ public class Main {
         });
         long listFinishSort = currentTimeMillis();
 
-        System.out.println("Time sort for Array = "+ (arrayFinishSort-arrayStartSort)+ " ms");
-        System.out.println("Time sort for List = "+ (listFinishSort-listStartSort)+ " ms");
+        System.out.println("Time sort for Array = " + (arrayFinishSort - arrayStartSort) + " ms");
+        System.out.println("Time sort for List = " + (listFinishSort - listStartSort) + " ms");
 
     }
 }
