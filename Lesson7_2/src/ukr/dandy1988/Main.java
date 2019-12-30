@@ -16,8 +16,9 @@ public class Main {
         System.out.println("(1- add new person in the queue, 2- output queue, 3 - delete person in queue, 4- exit");
         int oldAmount = -1;
 
+        Scanner sc1 = new Scanner(System.in);
         while(!(choice.equals("4"))) {
-            Scanner sc1 = new Scanner(System.in);
+
             System.out.println();
             System.out.print("Input your choice = ");
             choice = sc1.nextLine();
@@ -44,6 +45,10 @@ public class Main {
                 }
                 case "2":{
                     int indexQueue = 0;
+                    if (list1.size()==0){
+                        System.out.println("Queue is empty");
+                        break;
+                    }
                     for (Human human:list1) {
                         System.out.println("#"+indexQueue+" = "+human.getName()+" "+human.getSurname()+" age ="+ human.getAge());
                         indexQueue++;
@@ -66,7 +71,4 @@ public class Main {
             }
         }
     }
-
-
-
 }
